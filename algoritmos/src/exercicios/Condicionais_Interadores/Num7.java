@@ -24,21 +24,22 @@ public class Num7 {
 		case "+":
 			resultado = n1 + n2;
 			System.out.println("Valor da soma :" + resultado);
-
+			break;
 		case "-":
 			resultado = n1 - n2;
 			System.out.println("Valor da subtração :" + resultado);
-
+			break;
 		case "*":
 			resultado = n1 * n2;
 			System.out.println("Valor da multiplicação :" + resultado);
-
+			break;
 		case "/":
 			resultado = n1 / n2;
 			System.out.println("Valor da divisão :" + resultado);
-
+			break;
 		default:
 			System.out.println("Insira um operador válido");
+			break;
 		}
 	}
 }

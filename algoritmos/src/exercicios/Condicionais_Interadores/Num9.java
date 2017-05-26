@@ -12,7 +12,7 @@ public class Num9 {
 		Scanner k = new Scanner(System.in);
 		
 		System.out.println("Qual o clima de hoje ? (Sol, nublado ou chuvoso)");
-		clima = k.nextLine();
+		clima = k.nextLine().toLowerCase();
 		
 		System.out.println("Qual é a temperatura de hoje ? (Representada em um número inteiro)");
 		temperatura = k.nextInt();
@@ -27,6 +27,7 @@ public class Num9 {
 				roupa = "calça jeans";
 			}
 			System.out.println("Ela usará " + roupa);
+			break;
 		case "nublado" :
 			if(temperatura > 25) {
 				roupa = "vestido";
@@ -34,6 +35,7 @@ public class Num9 {
 				roupa = "moletom e sobretudo";
 			}
 			System.out.println("Ela usará " + roupa);
+			break;
 		case "chuvoso" :
 			roupa = "bota, calça jeans, ";
 			if(temperatura <= 10) {

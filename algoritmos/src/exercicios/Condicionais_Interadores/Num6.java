@@ -16,7 +16,7 @@ public class Num6 {
 		System.out.println("Em qual bairro você mora ?");
 		bairro = k.nextLine().toLowerCase();
 
-		if (cidade == "blumenau") {
+		if (cidade.equals("blumenau")) {
 			switch (bairro) {
 			case "velha":
 				System.out.println("Você se atrasará para o trabalho");
@@ -26,21 +26,23 @@ public class Num6 {
 				break;
 			case "garcia":
 				System.out.println("Você tem que sair de casa para não pegar trânsito");
+				break;
 			case "bela vista":
 				System.out.println("Pegue carona com quem vêem de gaspar, economiza gasolina!");
+				break;
 			default:
 			}
 
-			if (cidade == "gaspar" && bairro == "belchior") {
+			if (cidade.equals("gaspar") && bairro.equals("belchior")) {
 				System.out.println("OK, você gosta de pegar trânsito");
 			}
 
 			System.out.println("Você concorda com o que eu disse ? (true or false)");
 			condicao = k.nextLine();
 
-			if (condicao == "true") {
+			if (condicao.equals("true")) {
 				System.out.println("Show de bola");
-			} else if (condicao == "false") {
+			} else if (condicao.equals("false")) {
 				System.out.println("OK, problema é nosso");
 			}
 		}
