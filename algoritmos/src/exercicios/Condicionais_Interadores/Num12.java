@@ -27,6 +27,6 @@ public class Num12 {
 				meio = nums[i];
 			}
 		}
-		System.out.println(menor + " " + meio + " " + maior);
+		System.out.println(maior + " " + meio + " " + menor);
 	}
 }
