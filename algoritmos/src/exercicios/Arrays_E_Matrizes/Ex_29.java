@@ -31,18 +31,21 @@ public class Ex_29 {
 		String tempoAumento[][] = new String[7][2];
 		
 		tempoAumento[0][0] = "Inglês ";
-		tempoAumento[1][0] = " ";
-		tempoAumento[2][0] = " ";
-		tempoAumento[3][0] = " ";
-		tempoAumento[4][0] = " ";
-		tempoAumento[5][0] = " ";
-		tempoAumento[6][0] = " ";
-		tempoAumento[0][1] = " ";
-		tempoAumento[1][1] = " ";
-		tempoAumento[2][1] = " ";
-		tempoAumento[3][1] = " ";
-		tempoAumento[4][1] = " ";
-		tempoAumento[5][1] = " ";
-		tempoAumento[6][1] = " ";
+		tempoAumento[1][0] = "tempo <= 3 ";
+		tempoAumento[2][0] = "3 < tempo <= 9 ";
+		tempoAumento[3][0] = "9 < tempo <=12 ";
+		tempoAumento[4][0] = "12 < tempo <=24 ";
+		tempoAumento[5][0] = "24 < tempo <=36 ";
+		tempoAumento[6][0] = "36 < tempo ";
+		tempoAumento[0][1] = "3.5 ";
+		tempoAumento[1][1] = "0 ";
+		tempoAumento[2][1] = "3.8 ";
+		tempoAumento[3][1] = "5 ";
+		tempoAumento[4][1] = "15.5 ";
+		tempoAumento[5][1] = "20.6 ";
+		tempoAumento[6][1] = "30 ";
+		
+		System.out.println("Qual é o cargo do funcionário na empresa ?");
+		
 	}
 }
