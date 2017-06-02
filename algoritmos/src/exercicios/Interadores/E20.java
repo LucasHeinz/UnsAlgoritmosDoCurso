@@ -23,5 +23,7 @@ public class E20 {
 		if(resultado == 2) {
 			System.out.println(":)");
 		}
+		
+		k.close();
 	}
 }

@@ -6,39 +6,75 @@ public class Num17 {
 
 	public static void main(String[] args) {
 		
-		Scanner k = new Scanner(System.in);
-		
-		int maior = 0, menor = 1000000, meio = 0, coisa = 1;
-		int idade[] = new int[3];
-		String nome[] = new String[3];
-		
-		for(int i = 0; i < 3; i++) {
-			System.out.println("Informe o " + coisa + "º nome");
-			nome[i] = k.nextLine();
-			coisa++;
-		}
-		
-		coisa = 1;
-		
-		for(int i = 0; i < 3; i++) {
-			System.out.println("Informe o " + coisa + "ª idade");
-			idade[i] = k.nextInt();
-			coisa++;
-		}
-		for(int i = 0; i < 3; i++) {
-			if(idade[i] > maior) {
-				maior = idade[i];
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Informe o nome da Pessoa 1:");
+		String pessoa1 = scanner.nextLine();
+		System.out.println("Informe a idade da Pessoa 1:");
+		int idade1 = Integer.parseInt(scanner.nextLine());
+
+		System.out.println("Informe o nome da Pessoa 2:");
+		String pessoa2 = scanner.nextLine();
+		System.out.println("Informe a idade da Pessoa 2:");
+		int idade2 = Integer.parseInt(scanner.nextLine());
+
+		System.out.println("Informe o nome da Pessoa 3:");
+		String pessoa3 = scanner.nextLine();
+		System.out.println("Informe a idade da Pessoa 3:");
+		int idade3 = Integer.parseInt(scanner.nextLine());
+
+		String[] pessoaMaisVelha = new String[2];
+		String[] pessoaDoMeio = new String[2];
+		String[] pessoaMaisNova = new String[2];
+
+		if (idade1 > idade2 && idade1 > idade3) {
+			pessoaMaisVelha[0] = pessoa1;
+			pessoaMaisVelha[1] = String.valueOf(idade1);
+			if (idade2 > idade3) {
+				pessoaDoMeio[0] = pessoa2;
+				pessoaDoMeio[1] = String.valueOf(idade2);
+				pessoaMaisNova[0] = pessoa3;
+				pessoaMaisNova[1] = String.valueOf(idade3);
+			} else if(idade3 > idade2) {
+				pessoaDoMeio[0] = pessoa3;
+				pessoaDoMeio[1] = String.valueOf(idade3);
+				pessoaMaisNova[0] = pessoa2;
+				pessoaMaisNova[1] = String.valueOf(idade2);
 			}
-			if(idade[i] < menor) {
-				menor = idade[i];
+		} else if (idade2 > idade1 && idade2 > idade3) {
+			pessoaMaisVelha[0] = pessoa2;
+			pessoaMaisVelha[1] = String.valueOf(idade2);
+			if (idade1 > idade3) {
+				pessoaDoMeio[0] = pessoa1;
+				pessoaDoMeio[1] = String.valueOf(idade1);
+				pessoaMaisNova[0] = pessoa3;
+				pessoaMaisNova[1] = String.valueOf(idade3);
+			} else if (idade3 > idade1) {
+				pessoaDoMeio[0] = pessoa3;
+				pessoaDoMeio[1] = String.valueOf(idade3);
+				pessoaMaisNova[0] = pessoa1;
+				pessoaMaisNova[1] = String.valueOf(idade1);
+			}
+		} else if (idade3 > idade1 && idade3 > idade2) {
+			pessoaMaisVelha[0] = pessoa3;
+			pessoaMaisVelha[1] = String.valueOf(idade3);
+			if (idade1 > idade2) {
+				pessoaDoMeio[0] = pessoa1;
+				pessoaDoMeio[1] = String.valueOf(idade1);
+				pessoaMaisNova[0] = pessoa2;
+				pessoaMaisNova[1] = String.valueOf(idade2);
+			} else if (idade2 > idade1) {
+				pessoaDoMeio[0] = pessoa2;
+				pessoaDoMeio[1] = String.valueOf(idade2);
+				pessoaMaisNova[0] = pessoa1;
+				pessoaMaisNova[1] = String.valueOf(idade1);
 			}
 		}
-		for(int i = 0; i < 3; i++) {
-			if(idade[i] > menor && idade[i] < maior) {
-				meio = idade[i];
-			}
-		}
-		System.out.println("A idade do mais velho é " + maior + ", o do meio tem " + meio + " e o mais"
-				+ " novo tem " + menor);
+
+		System.out.println("A pessoa " + pessoaMaisVelha[0] + " com " + pessoaMaisVelha[1] + " anos, é a mais velha, "
+				+ "a pessoa " + pessoaDoMeio[0] + " com " + pessoaDoMeio[1] + " anos, é a do meio e a pessoa "
+				+ pessoaMaisNova[0] + " com " + pessoaMaisNova[1] + " é a mais nova.");
+
+		scanner.close();
 	}
 }
